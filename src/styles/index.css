@@ -57,7 +57,7 @@ p {
   font-family: var(--ff-serif);
   font-size: 1.125rem;
   border: none;
-  padding: 15px 75px;
+  padding: 1em 2em;
   border-radius: 0.5rem;
   background-color: hsl(var(--clr-accent-primary));
   color: hsl(var(--clr-neutral-100));
@@ -92,5 +92,5 @@ p {
 .container {
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-inline: auto;
 }
