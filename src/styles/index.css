@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+
+:root {
+  /* Color system */
+  /* White: 000 => Black: 900 */
+  --clr-neutral-100: 43 78% 98%;
+  --clr-neutral-500: 215 5% 54%;
+  --clr-neutral-800: 215 19% 25%;
+
+  --clr-accent-primary: 179 81% 29%;
+  --clr-accent-secondary: 25 94% 86%;
+
+  --ff-sans-serif: "Barlow", sans-serif;
+  --ff-serif: "Fraunces", serif;
+}
+
+/* Cascading styles */
+body {
+  font-family: var(--ff-sans-serif);
+  font-size: 16px;
+  color: hsl(var(--clr-neutral-800));
+}
+
+.header {
+  font-family: var(--ff-serif);
+  font-weight: 800;
+
+  &.--xl {
+    font-size: 9.375rem;
+    text-transform: lowercase;
+    font-weight: 800;
+    color: hsl(var(--clr-neutral-500));
+  }
+
+  &.--l {
+    font-size: 4.5rem;
+  }
+
+  &.--m {
+    font-size: 2.5rem;
+  }
+
+  &.--s {
+    font-size: 2.25rem;
+  }
+
+  &.--xs {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  color: hsl(var(--clr-neutral-800) / 0.9);
+}
+
+.button {
+  font-family: var(--ff-serif);
+  font-size: 1.125rem;
+  border: none;
+  padding: 15px 75px;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--clr-accent-primary));
+  color: hsl(var(--clr-neutral-100));
+  font-weight: 800;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #66d2cf;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #e2dedb;
+  }
+}
+
+.sub-card {
+  background-color: #f4f1eb;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: hsl(var(--clr-accent-secondary));
+  }
+
+  &.--active {
+    background-color: hsl(var(--clr-accent-primary));
+    color: hsl(var(--clr-neutral-100));
+  }
+}
+
+/* Utility class */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
