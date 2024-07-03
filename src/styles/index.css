@@ -51,6 +51,7 @@ body {
 
 p {
   color: hsl(var(--clr-neutral-800) / 0.9);
+  line-height: 1.5;
 }
 
 .button {

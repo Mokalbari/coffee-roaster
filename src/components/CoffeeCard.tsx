@@ -1,4 +1,4 @@
-import "../CoffeeCard.css"
+import "../styles/CoffeeCard.css"
 
 interface CoffeeCardType {
   key: number

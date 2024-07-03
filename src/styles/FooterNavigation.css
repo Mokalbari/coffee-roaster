@@ -6,6 +6,8 @@
   background-color: hsl(var(--clr-neutral-800));
   color: hsl(var(--clr-neutral-100));
 
+  margin-bottom: 10vh;
+
   .footer-navigation__logo {
     margin-right: 10%;
   }
