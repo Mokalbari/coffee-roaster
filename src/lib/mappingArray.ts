@@ -3,6 +3,10 @@ import planalto from "../assets/home/desktop/image-planalto.png"
 import picollo from "../assets/home/desktop/image-piccollo.png"
 import danche from "../assets/home/desktop/image-danche.png"
 
+import coffeeBean from "../assets/home/desktop/icon-coffee-bean.svg"
+import gift from "../assets/home/desktop/icon-gift.svg"
+import truck from "../assets/home/desktop/icon-truck.svg"
+
 export const navBarLinks = [
   {
     id: 1,
@@ -46,5 +50,29 @@ export const coffeeSelection = [
     name: "Danche",
     description:
       "Ethiopian hand-harvested blend densely packed with vibrant fruit notes",
+  },
+]
+
+export const chooseUsTextContent = [
+  {
+    id: 1,
+    img: coffeeBean,
+    title: "Best quality",
+    description:
+      "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
+  },
+  {
+    id: 2,
+    img: gift,
+    title: "Exclusive benefits",
+    description:
+      "Special offers and swag when you subscribe, including 30% off your first shipment.",
+  },
+  {
+    id: 3,
+    img: truck,
+    title: "Free shipping",
+    description:
+      "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
   },
 ]

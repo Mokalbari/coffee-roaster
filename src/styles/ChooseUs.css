@@ -1,0 +1,26 @@
+.choose-us {
+  padding-top: 6.25rem;
+  border-radius: 0.5rem;
+  background-color: hsl(var(--clr-neutral-800));
+  color: hsl(var(--clr-neutral-100));
+  text-align: center;
+  margin-bottom: 10vh;
+
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  p {
+    max-width: 55ch;
+    margin: 0 auto;
+    color: hsl(var(--clr-neutral-100));
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+
+  .choose-us__card-container {
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(25%);
+  }
+}
