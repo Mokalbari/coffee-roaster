@@ -32,7 +32,7 @@
 
 @media (min-width: 600px) and (max-width: 1024px) {
   .plan {
-    margin-top: 30vh;
+    margin-top: 35vh;
 
     .plan__card-container {
       margin-bottom: 2rem;
@@ -40,6 +40,6 @@
   }
 
   .plan__decoration-container {
-    width: 80%;
+    width: 85%;
   }
 }
