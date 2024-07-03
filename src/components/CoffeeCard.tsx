@@ -11,8 +11,10 @@ const CoffeeCard = ({ imgSrc, title, text }: CoffeeCardType) => {
   return (
     <div className="coffee-card">
       <img src={imgSrc} alt={title} />
-      <h3 className="header --xs">{title}</h3>
-      <p>{text}</p>
+      <div className="coffee-card__text-container">
+        <h3 className="header --xs">{title}</h3>
+        <p>{text}</p>
+      </div>
     </div>
   )
 }
