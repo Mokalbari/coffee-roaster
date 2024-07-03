@@ -23,7 +23,7 @@
 @media (min-width: 600px) and (max-width: 1024px) {
   .coffee-card {
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     max-width: fit-content;
     width: 100%;

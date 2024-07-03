@@ -29,3 +29,17 @@
     border: 1px solid hsl(var(--clr-accent-secondary) / 0.5);
   }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .plan {
+    margin-top: 30vh;
+
+    .plan__card-container {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .plan__decoration-container {
+    width: 80%;
+  }
+}

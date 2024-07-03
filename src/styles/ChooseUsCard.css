@@ -17,3 +17,21 @@
     line-height: 1.7;
   }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .card-container {
+    aspect-ratio: inherit;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    max-width: fit-content;
+  }
+
+  .card-container__text-container {
+    max-width: 75%;
+  }
+
+  img {
+    margin-left: 5%;
+  }
+}

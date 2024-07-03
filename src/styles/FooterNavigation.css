@@ -41,3 +41,17 @@
     fill: hsl(var(--clr-accent-secondary));
   }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .footer-navigation {
+    flex-direction: column;
+
+    .footer-navigation__logo {
+      margin: 2rem 0;
+    }
+
+    .footer-navigation__social-container {
+      margin: 4rem 0 0 0;
+    }
+  }
+}

@@ -24,3 +24,17 @@
     transform: translateY(25%);
   }
 }
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .choose-us {
+    margin: 0;
+    max-height: 35.625rem;
+
+    .choose-us__card-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      transform: translateY(10%);
+    }
+  }
+}
