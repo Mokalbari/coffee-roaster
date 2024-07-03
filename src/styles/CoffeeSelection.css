@@ -1,0 +1,24 @@
+.coffee-collection__header {
+  text-align: center;
+  font-size: 12.5rem;
+  text-transform: lowercase;
+  background: rgb(131, 136, 143);
+  background: rgb(131, 136, 143);
+  background: rgb(131, 136, 143);
+  background: rgb(131, 136, 143);
+  background: linear-gradient(
+    180deg,
+    rgba(131, 136, 143, 1) 0%,
+    rgba(255, 255, 255, 1) 91%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coffee-collection__card-container {
+  display: flex;
+  justify-content: space-around;
+
+  transform: translateY(-20%);
+}

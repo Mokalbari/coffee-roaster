@@ -1,0 +1,16 @@
+.coffee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 25ch;
+  text-align: center;
+
+  img {
+    max-width: 85%;
+    margin-bottom: 3rem;
+  }
+
+  h3 {
+    margin-bottom: 1em;
+  }
+}
