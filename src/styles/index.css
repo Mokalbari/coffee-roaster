@@ -59,15 +59,44 @@ p {
   .header {
     &.--xl {
       font-size: 9.375rem;
-      text-transform: lowercase;
     }
 
     &.--l {
-      font-size: 3rem;
+      font-size: 4.5rem;
     }
 
     &.--m {
       font-size: 2rem;
+    }
+
+    &.--s {
+      font-size: 1.5rem;
+    }
+
+    &.--xs {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 0.9375rem;
+    color: hsl(var(--clr-neutral-800) / 0.9);
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 599px) {
+  .header {
+    &.--xl {
+      font-size: 9.375rem;
+    }
+
+    &.--l {
+      font-size: 2.5rem;
+    }
+
+    &.--m {
+      font-size: 1.75rem;
     }
 
     &.--s {
