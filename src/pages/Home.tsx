@@ -1,5 +1,5 @@
 import ChooseUs from "../components/ChooseUs"
-import CoffeeSelection from "../components/CoffeSelection"
+import CoffeeSelection from "../components/CoffeeSelection"
 import HeroSection from "../components/HeroSection"
 import Plan from "../components/Plan"
 import "../styles/Home.css"
