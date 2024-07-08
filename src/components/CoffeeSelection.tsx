@@ -6,10 +6,10 @@ import "../styles/CoffeeSelection.css"
 const CoffeeSelection = () => {
   return (
     <Container>
-      <h2 className="text-gradient z-0 my-8 text-center font-serif text-4xl font-extrabold sm:text-[6rem] sm:leading-tight lg:text-[156px]">
+      <h2 className="text-gradient text-center font-serif text-[40px] font-extrabold sm:text-[96px] sm:max-md:text-[80px] lg:text-[150px]">
         Our collection
       </h2>
-      <section className="sm:flex sm:flex-col lg:-translate-y-28 lg:flex-row lg:gap-16">
+      <section className="flex flex-col flex-wrap gap-8 sm:-translate-y-10 lg:-translate-y-20 lg:flex-row lg:justify-center">
         {coffeeSelection.map(item => (
           <CoffeeCard
             key={item.id}
