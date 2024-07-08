@@ -14,7 +14,7 @@ const CoffeeCard = ({ imgSrc, title, text }: Props) => {
         className="h-auto max-w-xs lg:mb-16 lg:max-w-56"
       />
       <div className="">
-        <h3 className="mb-4 text-2xl font-bold sm:mb-6">{title}</h3>
+        <h3 className="mb-4 font-serif text-2xl font-bold sm:mb-6">{title}</h3>
         <p className="max-w-64">{text}</p>
       </div>
     </div>
