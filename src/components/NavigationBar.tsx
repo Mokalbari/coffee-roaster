@@ -7,7 +7,7 @@ import coffeeBeans from "../assets/shared/desktop/logo.svg"
 const NavigationBar = () => {
   return (
     <Container>
-      <nav className="flex w-full items-center justify-between py-10 sm:mb-14">
+      <nav className="flex w-full items-center justify-between py-10">
         <img
           src={coffeeBeans}
           alt="Coffee Roasters"

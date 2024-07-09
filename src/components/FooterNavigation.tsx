@@ -4,11 +4,11 @@ import Container from "./Container"
 const FooterNavigation = () => {
   return (
     <Container>
-      <footer className="bg-neutral-black">
+      <footer className="mb-8 flex flex-col items-center bg-neutral-black text-center font-bold uppercase text-neutral-grey lg:flex-row">
         <svg
           width="237"
           height="27"
-          className="footer-navigation__logo"
+          className="mb-14 mt-14 sm:mb-8 lg:mx-20 lg:my-0"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>Coffee Roasters</title>
@@ -23,19 +23,19 @@ const FooterNavigation = () => {
             />
           </g>
         </svg>
-        <menu className="footer-navigation__menu">
+        <menu className="flex flex-col gap-6 sm:flex-row">
           {navBarLinks.map(item => (
-            <li className="footer-navigation__list-item" key={item.id}>
+            <li className="" key={item.id}>
               {item.link}
             </li>
           ))}
         </menu>
-        <div className="footer-navigation__social-container">
+        <div className="group my-14 flex gap-6 lg:my-8 lg:ml-auto lg:mr-20">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            className="footer-navigation__social-icon"
+            className="hover:bg-accent-secondary"
           >
             <title>Come visit us on Facebook</title>
             <path
@@ -47,7 +47,7 @@ const FooterNavigation = () => {
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="20"
-            className="footer-navigation__social-icon"
+            className="hover:"
           >
             <title>Come visit us on Twitter</title>
             <path
