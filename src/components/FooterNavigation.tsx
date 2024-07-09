@@ -1,11 +1,10 @@
 import { navBarLinks } from "../lib/mappingArray"
-
-import "../styles/FooterNavigation.css"
+import Container from "./Container"
 
 const FooterNavigation = () => {
   return (
-    <div className="container">
-      <footer className="footer-navigation">
+    <Container>
+      <footer className="bg-neutral-black">
         <svg
           width="237"
           height="27"
@@ -70,7 +69,7 @@ const FooterNavigation = () => {
           </svg>
         </div>
       </footer>
-    </div>
+    </Container>
   )
 }
 

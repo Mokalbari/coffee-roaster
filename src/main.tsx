@@ -9,6 +9,7 @@ import HeroSection from "./components/HeroSection"
 import CoffeeSelection from "./components/CoffeeSelection"
 import ChooseUs from "./components/ChooseUs"
 import Plan from "./components/Plan"
+import FooterNavigation from "./components/FooterNavigation"
 
 // biome-ignore lint: non-null-assertion
 ReactDOM.createRoot(document.getElementById("root")!).render(
@@ -18,5 +19,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <CoffeeSelection />
     <ChooseUs />
     <Plan />
+    <FooterNavigation />
   </React.StrictMode>,
 )

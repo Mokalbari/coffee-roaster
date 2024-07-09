@@ -1,0 +1,34 @@
+.plan__decoration-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  
+    .circle {
+      border: 1px solid #0E8784;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  
+    hr {
+      width: 44%;
+      border: 1px solid #FDD6BA;
+    }
+  }
+
+  @media (width <= 640px) {
+    .plan__decoration-container {
+      display: none;
+
+      .circle {
+        display: none;
+      }
+
+      hr {
+        display: none;
+      }
+    }
+
+
+  }
