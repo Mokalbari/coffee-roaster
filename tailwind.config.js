@@ -31,7 +31,11 @@ export default {
         "hero-img-desktop":
           "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/home/desktop/image-hero-coffeepress.jpg)",
       },
+      maxWidth: {
+        "4/5": "80%",
+        half: "50%",
+      },
     },
   },
   plugins: [],
-};
+}

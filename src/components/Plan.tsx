@@ -1,19 +1,21 @@
-import "../styles/Plan.css"
 import { coffeeSubscriptionSteps } from "../lib/mappingArray"
 import PlanCard from "./PlanCard"
+import Container from "./Container"
 import Button from "./Button"
 
 const Plan = () => {
   return (
-    <div className="container">
-      <section className="plan">
-        <h2 className="header --xs">How it works</h2>
-        <div className="plan__decoration-container">
-          <div className="circle" />
-          <hr />
-          <div className="circle" />
-          <hr />
-          <div className="circle" />
+    <Container className="max-w-[95%]">
+      <section className="mt-[80vh] flex flex-col items-center sm:items-start">
+        <h2 className="mb-20 text-center font-serif text-2xl font-extrabold text-neutral-grey">
+          How it works
+        </h2>
+        <div className="">
+          <div className="" />
+          <hr className="" />
+          <div className="" />
+          <hr className="" />
+          <div className="" />
         </div>
         <div className="plan__card-container">
           {coffeeSubscriptionSteps.map(item => (
@@ -25,9 +27,9 @@ const Plan = () => {
             />
           ))}
         </div>
-        <Button text="Create your plan" />
+        <Button text="Create your plan" className="self-center" />
       </section>
-    </div>
+    </Container>
   )
 }
 

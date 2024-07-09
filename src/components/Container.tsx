@@ -4,7 +4,11 @@ interface Props {
 }
 
 const Container = ({ children, className }: Props) => (
-  <div className={`container mx-auto px-8 ${className || ""}`}>{children}</div>
+  <div
+    className={`mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 ${className || ""}`}
+  >
+    {children}
+  </div>
 )
 
 export default Container
