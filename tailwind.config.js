@@ -30,6 +30,12 @@ export default {
           "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/home/tablet/image-hero-coffeepress.jpg)",
         "hero-img-desktop":
           "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/home/desktop/image-hero-coffeepress.jpg)",
+        "aboutUs-img-mobile":
+          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/mobile/image-hero-whitecup.jpg)",
+        "aboutUs-img-tablet":
+          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/tablet/image-hero-whitecup.jpg)",
+        "aboutUs-img-desktop":
+          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/desktop/image-hero-whitecup.jpg)",
       },
       maxWidth: {
         "4/5": "80%",
