@@ -7,7 +7,15 @@ import coffeeBean from "../assets/home/desktop/icon-coffee-bean.svg"
 import gift from "../assets/home/desktop/icon-gift.svg"
 import truck from "../assets/home/desktop/icon-truck.svg"
 
-export const navBarLinks = [
+import ukImg from "../assets/about/desktop/illustration-uk.svg"
+import canadaImg from "../assets/about/desktop/illustration-canada.svg"
+import australiaImg from "../assets/about/desktop/illustration-australia.svg"
+
+type NavbarType = {
+  id: number,
+  link: string
+}
+export const navBarLinks: NavbarType[] = [
   {
     id: 1,
     link: "Home",
@@ -22,7 +30,14 @@ export const navBarLinks = [
   },
 ]
 
-export const coffeeSelection = [
+type CoffeeSelectionType = {
+  id: number,
+  image: string,
+  name: string,
+  description: string
+}
+
+export const coffeeSelection: CoffeeSelectionType[] = [
   {
     id: 1,
     image: granEspresso,
@@ -53,7 +68,14 @@ export const coffeeSelection = [
   },
 ]
 
-export const chooseUsTextContent = [
+type ChooseUsType = {
+  id: number,
+  img: string,
+  title: string,
+  description: string
+}
+
+export const chooseUsTextContent: ChooseUsType[] = [
   {
     id: 1,
     img: coffeeBean,
@@ -77,7 +99,13 @@ export const chooseUsTextContent = [
   },
 ]
 
-export const coffeeSubscriptionSteps = [
+type SubscriptionType = {
+  index: number,
+  title: string,
+  description: string
+}
+
+export const coffeeSubscriptionSteps: SubscriptionType[] = [
   {
     index: 1,
     title: "Pick your coffee",
@@ -97,3 +125,45 @@ export const coffeeSubscriptionSteps = [
       "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
   },
 ]
+
+export type AddressesType = {
+  key: number,
+  imgSrc: string,
+  country: string,
+  address: string,
+  city: string,
+  location: string,
+  phone: string,
+}
+
+export const addresses: AddressesType[] = [
+  {
+    key: 1,
+    imgSrc: ukImg,
+    country: "United Kingdom",
+    address: "68 Asfordby Rd",
+    city: "Alcaston",
+    location: "SY6 1YA",
+    phone: "+44 1241 918425"
+  },
+  {
+    key: 2,
+    imgSrc: canadaImg,
+    country: "Canada",
+    address: "1528 Eglinton Avenue",
+    city: "Toronto",
+    location: "Ontario M4P 1A6",
+    phone: "+1 416 485 2997"
+  },
+  {
+    key: 3,
+    imgSrc: australiaImg,
+    country: "Australia",
+    address: "36 Swanston Street",
+    city: "Kewell",
+    location: "Victoria",
+    phone: "+61 4 9928 3629"
+  }
+];
+
+console.log(addresses);
