@@ -17,7 +17,7 @@ const Commitment = () => {
             <img
               className="mb-12 rounded-xl"
               src={commitmentImgMobile}
-              alt="Description de l'image"
+              alt="A coffee roaster making coffee art"
             />
           </picture>
         </div>

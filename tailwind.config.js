@@ -36,6 +36,12 @@ export default {
           "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/tablet/image-hero-whitecup.jpg)",
         "aboutUs-img-desktop":
           "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/desktop/image-hero-whitecup.jpg)",
+        "aboutUs-bg-mobile":
+          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/mobile/bg-quality.png)",
+        "aboutUs-bg-tablet":
+          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/tablet/bg-quality.png)",
+        "aboutUs-bg-desktop":
+          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/desktop/bg-quality.png)",
       },
       maxWidth: {
         "4/5": "80%",
