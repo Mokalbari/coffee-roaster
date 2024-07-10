@@ -6,13 +6,13 @@ import "./styles/index.css"
 
 import NavigationBar from "./components/NavigationBar"
 import FooterNavigation from "./components/FooterNavigation"
-import AboutUsPage from "./pages/AboutUsPage"
+import PlanPage from "./pages/PlanPage"
 
 // biome-ignore lint: non-null-assertion
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <NavigationBar />
-    <AboutUsPage />
+    <PlanPage />
     <FooterNavigation />
   </React.StrictMode>,
 )
