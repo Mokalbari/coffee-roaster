@@ -3,6 +3,7 @@ export type CoffeeType = {
   type: string
   description: string
   section: string
+  step: string
 }
 
 export const coffeeBrewing: CoffeeType[] = [
@@ -11,6 +12,7 @@ export const coffeeBrewing: CoffeeType[] = [
     type: "Capsule",
     description: "Compatible with Nespresso systems and similar brewers",
     section: "How do you drink your coffee?",
+    step: "Preferences",
   },
   {
     id: 2,
@@ -18,6 +20,7 @@ export const coffeeBrewing: CoffeeType[] = [
     description:
       "For pour over or drip methods like Aeropress, Chemex, and V60",
     section: "How do you drink your coffee?",
+    step: "Preferences",
   },
   {
     id: 3,
@@ -25,6 +28,7 @@ export const coffeeBrewing: CoffeeType[] = [
     description:
       "Dense and finely ground beans for an intense, flavorful experience",
     section: "How do you drink your coffee?",
+    step: "Preferences",
   },
 ]
 
@@ -35,6 +39,7 @@ export const coffeeTypes: CoffeeType[] = [
     description:
       "Distinct, high quality coffee from a specific family-owned farm",
     section: "What type of coffee?",
+    step: "Bean Type",
   },
   {
     id: 2,
@@ -42,6 +47,7 @@ export const coffeeTypes: CoffeeType[] = [
     description:
       "Just like regular coffee, except the caffeine has been removed",
     section: "What type of coffee?",
+    step: "Bean Type",
   },
   {
     id: 3,
@@ -49,6 +55,7 @@ export const coffeeTypes: CoffeeType[] = [
     description:
       "Combination of two or three dark roasted beans of organic coffees",
     section: "What type of coffee?",
+    step: "Bean Type",
   },
 ]
 
@@ -59,6 +66,7 @@ export const coffeeQuantities: CoffeeType[] = [
     description:
       "Perfect for the solo drinker. Yields about 12 delicious cups.",
     section: "How much would you like?",
+    step: "Quantity",
   },
   {
     id: 2,
@@ -66,6 +74,7 @@ export const coffeeQuantities: CoffeeType[] = [
     description:
       "Perfect option for a couple. Yields about 40 delectable cups.",
     section: "How much would you like?",
+    step: "Quantity",
   },
   {
     id: 3,
@@ -73,6 +82,7 @@ export const coffeeQuantities: CoffeeType[] = [
     description:
       "Perfect for offices and events. Yields about 90 delightful cups.",
     section: "How much would you like?",
+    step: "Quantity",
   },
 ]
 
@@ -82,6 +92,7 @@ export const coffeeGrindOptions: CoffeeType[] = [
     type: "Wholebean",
     description: "Best choice if you cherish the full sensory experience",
     section: "Want us to grind them?",
+    step: "Grind Option",
   },
   {
     id: 2,
@@ -89,12 +100,14 @@ export const coffeeGrindOptions: CoffeeType[] = [
     description:
       "For drip or pour-over coffee methods such as V60 or Aeropress",
     section: "Want us to grind them?",
+    step: "Grind Option",
   },
   {
     id: 3,
     type: "Cafetiére",
     description: "Course ground beans specially suited for french press coffee",
     section: "Want us to grind them?",
+    step: "Grind Option",
   },
 ]
 
@@ -104,17 +117,20 @@ export const coffeeDeliveryOptions: CoffeeType[] = [
     type: "Every week",
     description: "$7.20 per shipment. Includes free first-class shipping.",
     section: "How often should we deliver?",
+    step: "Deliveries",
   },
   {
     id: 2,
     type: "Every 2 weeks",
     description: "$9.60 per shipment. Includes free priority shipping.",
     section: "How often should we deliver?",
+    step: "Deliveries",
   },
   {
     id: 3,
     type: "Every month",
     description: "$12.00 per shipment. Includes free priority shipping.",
     section: "How often should we deliver?",
+    step: "Deliveries",
   },
 ]
