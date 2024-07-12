@@ -11,6 +11,7 @@ import {
   coffeeGrindOptions,
   coffeeDeliveryOptions,
 } from "../lib/subscriptionArray"
+import RecapCard from "../components/RecapCard"
 
 const coffeeGlobalArray = [
   coffeeBrewing,
@@ -34,7 +35,7 @@ const PlanPage = () => {
               {coffeeGlobalArray.map((array, index) => (
                 <FormStepProgression
                   coffeeArray={array}
-                  key={index}
+                  key={array[0].id}
                   index={index}
                 />
               ))}
@@ -43,12 +44,13 @@ const PlanPage = () => {
           <form action="post">
             {/* This component has two children : a title and a card.
             It's main focus is to pass props down to children */}
-            {coffeeGlobalArray.map((array, index) => (
-              <FormStep coffeeArray={array} key={index} />
+            {coffeeGlobalArray.map(array => (
+              <FormStep coffeeArray={array} key={array[0].id} />
             ))}
           </form>
         </section>
       </Container>
+      <RecapCard />
     </main>
   )
 }
