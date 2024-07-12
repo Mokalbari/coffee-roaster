@@ -1,5 +1,5 @@
 import PlanHero from "../components/PlanHero"
-import PlanSelection from "../components/PlanSelection"
+import PlanSelection from "../components/PlanSelectionLayout"
 
 const PlanPage = () => {
   return (
