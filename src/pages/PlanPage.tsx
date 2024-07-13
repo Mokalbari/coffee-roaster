@@ -8,6 +8,7 @@ import { FormContextProvider } from "../context/FormContext"
 import coffeeSubscriptionData from "../lib/coffeeSubscriptionData"
 import RecapCard from "../components/RecapCard"
 import Button from "../components/Button"
+import type { CoffeeStepsName } from "../lib/coffeeSubscriptionData"
 
 const PlanPage = () => {
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
@@ -36,7 +37,11 @@ const PlanPage = () => {
               {/* This component has two children : a title and a card.
               It's main focus is to pass props down to children */}
               {Object.entries(coffeeSubscriptionData).map(([step, entries]) => (
-                <FormStep coffeeArray={Object.values(entries)} key={step} />
+                <FormStep
+                  coffeeArray={Object.values(entries)}
+                  key={step}
+                  step={step as CoffeeStepsName}
+                />
               ))}
               <RecapCard />
               <Button

@@ -1,15 +1,28 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import FormTitle from "./FormTitle"
 import SubscriptionCard from "./SubscriptionCard"
-import type { CoffeeTypeEntry } from "../lib/coffeeSubscriptionData"
+import { FormContext } from "../context/FormContext"
+import type {
+  CoffeeStepsName,
+  CoffeeTypeEntry,
+} from "../lib/coffeeSubscriptionData"
 
 type Props = {
   coffeeArray: CoffeeTypeEntry[]
+  step: CoffeeStepsName
 }
 
-const FormStep = ({ coffeeArray }: Props) => {
+const FormStep = ({ coffeeArray, step }: Props) => {
   const [selected, setSelected] = useState<string | null>(null)
-  const handleSelect = (name: string) => () => setSelected(name)
+  const { setUserSelection } = useContext(FormContext)
+
+  const handleClick = (name: string) => () => {
+    setSelected(name)
+    setUserSelection(prevState => ({
+      ...prevState,
+      [step]: name,
+    }))
+  }
 
   return (
     <>
@@ -17,7 +30,7 @@ const FormStep = ({ coffeeArray }: Props) => {
       <div className="mb-28 grid cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col">
         {coffeeArray.map(coffee => (
           <SubscriptionCard
-            onClick={handleSelect(coffee.type)}
+            onClick={handleClick(coffee.type)}
             key={coffee.id}
             title={coffee.type}
             value={coffee.type}

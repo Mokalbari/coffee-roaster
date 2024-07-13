@@ -12,7 +12,7 @@ type SubscriptionEntries = {
 }[CoffeeStepsName]
 
 // The user choice can be both an empty string or a key in the SubcriptionEntry
-type ValidSubscriptionEntries = SubscriptionEntries | ""
+type ValidSubscriptionEntries = SubscriptionEntries | "_____"
 
 // This is defining Props and Type for the context
 type Props = {
@@ -33,11 +33,11 @@ const defaultFormContext: Type = {
   isToggled: false,
   setIsToggled: () => {},
   userSelection: {
-    brewing: "",
-    beanTypes: "",
-    quantities: "",
-    grindOptions: "",
-    deliveryOptions: "",
+    brewing: "_____",
+    beanTypes: "_____",
+    quantities: "_____",
+    grindOptions: "_____",
+    deliveryOptions: "_____",
   },
   setUserSelection: () => {},
 }

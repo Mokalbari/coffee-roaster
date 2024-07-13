@@ -1,13 +1,8 @@
-type Props = {
-  brewing?: string
-  type?: string
-  quantity?: string
-  grind?: string
-  delivery?: string
-}
+import { useContext } from "react"
+import { FormContext } from "../context/FormContext"
 
-const RecapCard = ({ brewing, type, quantity, grind, delivery }: Props) => {
-  const placeHolder = "_____"
+const RecapCard = () => {
+  const { userSelection } = useContext(FormContext)
 
   return (
     <>
@@ -15,21 +10,25 @@ const RecapCard = ({ brewing, type, quantity, grind, delivery }: Props) => {
         <h2 className="mb-4 uppercase opacity-50">Order summary</h2>
         <blockquote className="font-serif text-2xl font-extrabold">
           <span className="">"</span> I drink my coffee as{" "}
-          <span className="text-accent-primary">{brewing || placeHolder}</span>,{" "}
-          {brewing === "Capsules" ? "using" : "with a"}{" "}
-          <span className="text-accent-primary">{type || placeHolder}</span>{" "}
+          <span className="text-accent-primary">{userSelection.brewing}</span>,{" "}
+          {userSelection.brewing === "Capsules" ? "using" : "with a"}{" "}
+          <span className="text-accent-primary">{userSelection.beanTypes}</span>{" "}
           type of bean.{" "}
-          <span className="text-accent-primary">{quantity || placeHolder}</span>{" "}
-          {brewing !== "Capsules" && (
+          <span className="text-accent-primary">
+            {userSelection.quantities}
+          </span>{" "}
+          {userSelection.brewing !== "Capsules" && (
             <>
               ground a la{" "}
               <span className="text-accent-primary">
-                {grind || placeHolder}
+                {userSelection.grindOptions}
               </span>
             </>
           )}
           , sent to me{" "}
-          <span className="text-accent-primary">{delivery || placeHolder}</span>
+          <span className="text-accent-primary">
+            {userSelection.deliveryOptions}
+          </span>
           .<span>"</span>
         </blockquote>
       </section>
