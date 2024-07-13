@@ -4,22 +4,9 @@ import FormStepProgression from "../components/FormStepProgression"
 import PlanSelection from "../components/PlanSelectionLayout"
 import FormStep from "../components/FormStep"
 import Container from "../components/Container"
-import {
-  coffeeBrewing,
-  coffeeTypes,
-  coffeeQuantities,
-  coffeeGrindOptions,
-  coffeeDeliveryOptions,
-} from "../lib/subscriptionArray"
+import { FormContextProvider } from "../context/FormContext"
+import coffeeSubscriptionData from "../lib/coffeeSubscriptionData"
 import RecapCard from "../components/RecapCard"
-
-const coffeeGlobalArray = [
-  coffeeBrewing,
-  coffeeTypes,
-  coffeeQuantities,
-  coffeeGrindOptions,
-  coffeeDeliveryOptions,
-]
 
 const PlanPage = () => {
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
@@ -28,29 +15,33 @@ const PlanPage = () => {
     <main>
       <PlanHero />
       <PlanSelection />
-      <Container>
-        <section className="gap-32 lg:flex">
-          {isLargeScreen && (
-            <aside className="w-1/3">
-              {coffeeGlobalArray.map((array, index) => (
-                <FormStepProgression
-                  coffeeArray={array}
-                  key={array[0].id}
-                  index={index}
-                />
+      <FormContextProvider>
+        <Container>
+          <section className="gap-32 lg:flex">
+            {isLargeScreen && (
+              <aside className="w-1/3">
+                {Object.entries(coffeeSubscriptionData).map(
+                  ([step, entries], index) => (
+                    <FormStepProgression
+                      coffeeArray={Object.values(entries)}
+                      key={step}
+                      index={index}
+                    />
+                  ),
+                )}
+              </aside>
+            )}
+            <form action="post">
+              {/* This component has two children : a title and a card.
+              It's main focus is to pass props down to children */}
+              {Object.entries(coffeeSubscriptionData).map(([step, entries]) => (
+                <FormStep coffeeArray={Object.values(entries)} key={step} />
               ))}
-            </aside>
-          )}
-          <form action="post">
-            {/* This component has two children : a title and a card.
-            It's main focus is to pass props down to children */}
-            {coffeeGlobalArray.map(array => (
-              <FormStep coffeeArray={array} key={array[0].id} />
-            ))}
-          </form>
-        </section>
-      </Container>
-      <RecapCard />
+            </form>
+          </section>
+        </Container>
+        <RecapCard />
+      </FormContextProvider>
     </main>
   )
 }

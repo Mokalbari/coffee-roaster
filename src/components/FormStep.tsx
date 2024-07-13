@@ -1,10 +1,10 @@
 import { useState } from "react"
 import FormTitle from "./FormTitle"
 import SubscriptionCard from "./SubscriptionCard"
-import type { CoffeeType } from "../lib/subscriptionArray"
+import type { CoffeeTypeEntry } from "../lib/coffeeSubscriptionData"
 
 type Props = {
-  coffeeArray: CoffeeType[]
+  coffeeArray: CoffeeTypeEntry[]
 }
 
 const FormStep = ({ coffeeArray }: Props) => {

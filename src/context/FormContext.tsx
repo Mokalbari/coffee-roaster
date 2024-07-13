@@ -10,6 +10,8 @@ type Type = {
   setIsToggled: React.Dispatch<React.SetStateAction<boolean>>
   isCapsuleSelected: boolean
   setIsCapsuleSelected: React.Dispatch<React.SetStateAction<boolean>>
+  userChoice: string[]
+  setUserChoice: React.Dispatch<React.SetStateAction<never[]>>
 }
 
 const defaultFormContext: Type = {
@@ -17,6 +19,8 @@ const defaultFormContext: Type = {
   setIsToggled: () => {},
   isCapsuleSelected: false,
   setIsCapsuleSelected: () => {},
+  userChoice: [],
+  setUserChoice: () => {},
 }
 
 export const FormContext = createContext(defaultFormContext)
@@ -26,6 +30,7 @@ export const FormContextProvider = ({ children }: Props) => {
   const [isCapsuleSelected, setIsCapsuleSelected] = useState(
     defaultFormContext.isCapsuleSelected,
   )
+  const [userChoice, setUserChoice] = useState([])
 
   return (
     <FormContext.Provider
@@ -34,6 +39,8 @@ export const FormContextProvider = ({ children }: Props) => {
         setIsToggled,
         isCapsuleSelected,
         setIsCapsuleSelected,
+        userChoice,
+        setUserChoice,
       }}
     >
       {children}

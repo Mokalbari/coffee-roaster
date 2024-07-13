@@ -1,7 +1,7 @@
-import type { CoffeeType } from "../lib/subscriptionArray"
+import type { CoffeeTypeEntry } from "../lib/coffeeSubscriptionData"
 type Props = {
-  coffeeArray: CoffeeType[]
-  key: number
+  coffeeArray: CoffeeTypeEntry[]
+  key: string
   index: number
 }
 

@@ -12,7 +12,7 @@ import canadaImg from "../assets/about/desktop/illustration-canada.svg"
 import australiaImg from "../assets/about/desktop/illustration-australia.svg"
 
 type NavbarType = {
-  id: number,
+  id: number
   link: string
 }
 export const navBarLinks: NavbarType[] = [
@@ -31,9 +31,9 @@ export const navBarLinks: NavbarType[] = [
 ]
 
 type CoffeeSelectionType = {
-  id: number,
-  image: string,
-  name: string,
+  id: number
+  image: string
+  name: string
   description: string
 }
 
@@ -69,9 +69,9 @@ export const coffeeSelection: CoffeeSelectionType[] = [
 ]
 
 type ChooseUsType = {
-  id: number,
-  img: string,
-  title: string,
+  id: number
+  img: string
+  title: string
   description: string
 }
 
@@ -100,8 +100,8 @@ export const chooseUsTextContent: ChooseUsType[] = [
 ]
 
 type SubscriptionType = {
-  index: number,
-  title: string,
+  index: number
+  title: string
   description: string
 }
 
@@ -127,13 +127,13 @@ export const coffeeSubscriptionSteps: SubscriptionType[] = [
 ]
 
 export type AddressesType = {
-  key: number,
-  imgSrc: string,
-  country: string,
-  address: string,
-  city: string,
-  location: string,
-  phone: string,
+  key: number
+  imgSrc: string
+  country: string
+  address: string
+  city: string
+  location: string
+  phone: string
 }
 
 export const addresses: AddressesType[] = [
@@ -144,7 +144,7 @@ export const addresses: AddressesType[] = [
     address: "68 Asfordby Rd",
     city: "Alcaston",
     location: "SY6 1YA",
-    phone: "+44 1241 918425"
+    phone: "+44 1241 918425",
   },
   {
     key: 2,
@@ -153,7 +153,7 @@ export const addresses: AddressesType[] = [
     address: "1528 Eglinton Avenue",
     city: "Toronto",
     location: "Ontario M4P 1A6",
-    phone: "+1 416 485 2997"
+    phone: "+1 416 485 2997",
   },
   {
     key: 3,
@@ -162,8 +162,6 @@ export const addresses: AddressesType[] = [
     address: "36 Swanston Street",
     city: "Kewell",
     location: "Victoria",
-    phone: "+61 4 9928 3629"
-  }
-];
-
-console.log(addresses);
+    phone: "+61 4 9928 3629",
+  },
+]
