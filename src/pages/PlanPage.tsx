@@ -7,6 +7,7 @@ import Container from "../components/Container"
 import { FormContextProvider } from "../context/FormContext"
 import coffeeSubscriptionData from "../lib/coffeeSubscriptionData"
 import RecapCard from "../components/RecapCard"
+import Button from "../components/Button"
 
 const PlanPage = () => {
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
@@ -31,16 +32,20 @@ const PlanPage = () => {
                 )}
               </aside>
             )}
-            <form action="post">
+            <form action="post" className="flex flex-col">
               {/* This component has two children : a title and a card.
               It's main focus is to pass props down to children */}
               {Object.entries(coffeeSubscriptionData).map(([step, entries]) => (
                 <FormStep coffeeArray={Object.values(entries)} key={step} />
               ))}
+              <RecapCard />
+              <Button
+                text="Create my plan!"
+                className="mb-32 sm:self-center lg:self-end"
+              />
             </form>
           </section>
         </Container>
-        <RecapCard />
       </FormContextProvider>
     </main>
   )

@@ -1,6 +1,3 @@
-import Container from "./Container"
-import Button from "./Button"
-
 type Props = {
   brewing?: string
   type?: string
@@ -13,7 +10,7 @@ const RecapCard = ({ brewing, type, quantity, grind, delivery }: Props) => {
   const placeHolder = "_____"
 
   return (
-    <Container className="flex flex-col">
+    <>
       <section className="mb-14 rounded-xl bg-neutral-black p-8 text-neutral-white">
         <h2 className="mb-4 uppercase opacity-50">Order summary</h2>
         <blockquote className="font-serif text-2xl font-extrabold">
@@ -36,8 +33,7 @@ const RecapCard = ({ brewing, type, quantity, grind, delivery }: Props) => {
           .<span>"</span>
         </blockquote>
       </section>
-      <Button text="Create my plan!" className="mb-32 self-center" />
-    </Container>
+    </>
   )
 }
 
