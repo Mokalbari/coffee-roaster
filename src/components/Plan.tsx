@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { coffeeSubscriptionSteps } from "../lib/mappingArray"
 import "../styles/Plan.css"
 import PlanCard from "./PlanCard"
@@ -28,7 +29,12 @@ const Plan = () => {
             />
           ))}
         </div>
-        <Button text="Create your plan" className="self-center sm:self-start" />
+        <Link to="/create-a-plan">
+          <Button
+            text="Create your plan"
+            className="self-center sm:self-start"
+          />
+        </Link>
       </section>
     </Container>
   )

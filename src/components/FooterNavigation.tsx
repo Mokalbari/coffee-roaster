@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { navBarLinks } from "../lib/mappingArray"
 import Container from "./Container"
 
@@ -26,7 +27,7 @@ const FooterNavigation = () => {
         <menu className="flex flex-col gap-6 sm:flex-row">
           {navBarLinks.map(item => (
             <li className="" key={item.id}>
-              {item.link}
+              <Link to={item.path}>{item.link}</Link>
             </li>
           ))}
         </menu>

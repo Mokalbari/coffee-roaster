@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Button from "./Button"
 import Container from "./Container"
 
@@ -15,7 +16,9 @@ const HeroSection = () => {
             your door, at your schedule.
           </p>
           <div className="text-center sm:text-left">
-            <Button text="Create your plan" />
+            <Link to="/create-a-plan">
+              <Button text="Create your plan" />
+            </Link>
           </div>
         </div>
       </section>

@@ -14,19 +14,23 @@ import australiaImg from "../assets/about/desktop/illustration-australia.svg"
 type NavbarType = {
   id: number
   link: string
+  path: string
 }
 export const navBarLinks: NavbarType[] = [
   {
     id: 1,
     link: "Home",
+    path: "/",
   },
   {
     id: 2,
     link: "About us",
+    path: "/about-us",
   },
   {
     id: 3,
     link: "Create your plan",
+    path: "/create-a-plan",
   },
 ]
 

@@ -1,6 +1,7 @@
 import { navBarLinks } from "../lib/mappingArray"
 import Container from "./Container"
 import burgerIcon from "../assets/shared/mobile/icon-hamburger.svg"
+import { Link } from "react-router-dom"
 // import closeIcon from "../assets/shared/mobile/icon-close.svg"
 import coffeeBeans from "../assets/shared/desktop/logo.svg"
 
@@ -17,7 +18,7 @@ const NavigationBar = () => {
         <menu className="hidden gap-8 font-sans font-semibold uppercase text-neutral-grey sm:flex">
           {navBarLinks.map(link => (
             <li className="primary-navigation__list-item" key={link.id}>
-              {link.link}
+              <Link to={link.path}>{link.link}</Link>
             </li>
           ))}
         </menu>
