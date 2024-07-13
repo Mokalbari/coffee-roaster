@@ -1,38 +1,9 @@
-.coffee-collection__header {
-  text-align: center;
-  font-size: clamp(9rem, 0.3846rem + 13.4615vw, 12.5rem);
-  text-transform: lowercase;
-  background: rgb(131, 136, 143);
-  background: rgb(131, 136, 143);
-  background: rgb(131, 136, 143);
-  background: rgb(131, 136, 143);
+.text-gradient {
   background: linear-gradient(
     180deg,
-    rgba(131, 136, 143, 1) 0%,
-    rgba(255, 255, 255, 1) 91%
+    rgb(170, 174, 177) 0%,
+    rgba(255, 255, 255, 0.286) 100%
   );
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.coffee-collection__card-container {
-  display: flex;
-  justify-content: space-around;
-
-  transform: translateY(-20%);
-}
-
-@media (min-width: 600px) and (max-width: 1024px) {
-  .coffee-collection__header {
-    font-size: 9rem;
-  }
-
-  .coffee-collection__card-container {
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    transform: translateY(-5%);
-  }
 }
