@@ -9,9 +9,10 @@ const RecapCard = () => {
       <section className="mb-14 rounded-xl bg-neutral-black p-8 text-neutral-white">
         <h2 className="mb-4 uppercase opacity-50">Order summary</h2>
         <blockquote className="font-serif text-2xl font-extrabold">
-          <span className="">"</span> I drink my coffee as{" "}
+          <span className="">"</span> I drink my coffee{" "}
+          {userSelection.brewing === "Capsules" ? "using" : "as"}{" "}
           <span className="text-accent-primary">{userSelection.brewing}</span>,{" "}
-          {userSelection.brewing === "Capsules" ? "using" : "with a"}{" "}
+          with a{" "}
           <span className="text-accent-primary">{userSelection.beanTypes}</span>{" "}
           type of bean.{" "}
           <span className="text-accent-primary">

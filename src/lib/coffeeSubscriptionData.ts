@@ -20,7 +20,7 @@ const coffeeSubscriptionData: Record<
   brewing: {
     1: {
       id: 1,
-      type: "Capsule",
+      type: "Capsules",
       description: "Compatible with Nespresso systems and similar brewers",
       section: "How do you drink your coffee?",
       step: "Preferences",

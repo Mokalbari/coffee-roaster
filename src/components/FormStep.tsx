@@ -15,7 +15,7 @@ type Props = {
 const FormStep = ({ coffeeArray, step }: Props) => {
   const [selected, setSelected] = useState<string | null>(null)
   const [isToggled, setIsToggled] = useState(false)
-  const { setUserSelection } = useContext(FormContext)
+  const { userSelection, setUserSelection } = useContext(FormContext)
 
   const handleClick = (name: string) => () => {
     setSelected(name)
@@ -25,13 +25,21 @@ const FormStep = ({ coffeeArray, step }: Props) => {
     }))
   }
 
-  const handleToggleSection = () => setIsToggled(!isToggled)
+  const handleToggleSection = (section: string) => () => {
+    if (
+      section === "Want us to grind them?" &&
+      userSelection.brewing === "Capsules"
+    ) {
+      return
+    }
+    setIsToggled(!isToggled)
+  }
 
   return (
     <>
       <FormTitle
         sectionTitle={coffeeArray[0].section}
-        onClick={handleToggleSection}
+        onClick={handleToggleSection(coffeeArray[0].section)}
       />
       <div
         className={`mb-28 cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col ${isToggled ? "grid" : "hidden"}`}
