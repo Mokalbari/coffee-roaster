@@ -9,7 +9,7 @@ const FormTitle = ({ sectionTitle, onClick }: Props) => {
   return (
     <div
       onClick={onClick}
-      className="mb-8 flex items-center justify-between font-serif text-2xl font-extrabold text-neutral-grey"
+      className="mb-8 flex cursor-pointer items-center justify-between font-serif text-2xl font-extrabold text-neutral-grey"
     >
       <h2 className="">{sectionTitle}</h2>
       <img src={arrowIcon} alt="expand the menu" />
