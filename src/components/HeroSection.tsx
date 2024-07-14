@@ -17,7 +17,7 @@ const HeroSection = () => {
           </p>
           <div className="text-center sm:text-left">
             <Link to="/create-a-plan">
-              <Button text="Create your plan" />
+              <Button type="button" text="Create your plan" />
             </Link>
           </div>
         </div>

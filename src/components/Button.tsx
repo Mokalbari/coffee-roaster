@@ -1,15 +1,17 @@
-interface Props {
+type Props = {
   text: string
+  type: "submit" | "reset" | "button"
   disabled?: boolean
   className?: string
+  onClick?: () => void
 }
 
-const Button = ({ text, disabled, className }: Props) => {
+const Button = ({ text, disabled, className, type }: Props) => {
   return (
     <button
-      type="button"
+      type={type}
       disabled={disabled}
-      className={`py-4 px-16 bg-accent-primary rounded-lg text-neutral-white text-xl font-semibold hover:bg-accent-hover disabled:bg-neutral-lightgrey min-w-fit ${className || ""}`}
+      className={`min-w-fit rounded-lg bg-accent-primary px-8 py-4 font-serif text-xl font-extrabold text-neutral-white hover:bg-accent-hover disabled:bg-neutral-lightgrey ${className || ""}`}
     >
       {text}
     </button>
