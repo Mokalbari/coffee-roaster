@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import { useContext } from "react"
 import OrderSummary from "./OrderSummary"
 import { useMediaQuery } from "react-responsive"
 import FormStepProgression from "../components/FormStepProgression"
@@ -9,22 +9,14 @@ import RecapCard from "../components/RecapCard"
 import Button from "../components/Button"
 import type { CoffeeStepsName } from "../lib/coffeeSubscriptionData"
 import { FormContext } from "../context/FormContext"
+import getClassName from "../functions/getClassName"
 
 const Form = () => {
-  const [modal, setModal] = useState(false)
-  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
   const { formComplete, userSelection } = useContext(FormContext)
-  const handleClick = () => setModal(true)
-  const arrayFromCoffeeSubscription = Object.entries(coffeeSubscriptionData)
 
-  // Define a function to determine the class based on userSelection
-  const getClassName = (
-    step: CoffeeStepsName,
-    userSelection: Record<CoffeeStepsName, string>,
-    classOutput: string,
-  ): string | false => {
-    return userSelection[step] !== "_____" && classOutput
-  }
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
+
+  const arrayFromCoffeeSubscription = Object.entries(coffeeSubscriptionData)
 
   return (
     <Container>
@@ -37,7 +29,7 @@ const Form = () => {
                   step as CoffeeStepsName,
                   userSelection,
                   "text-slate-900",
-                )} // entry === index ?
+                )}
                 classNameSpan={getClassName(
                   step as CoffeeStepsName,
                   userSelection,
@@ -62,7 +54,6 @@ const Form = () => {
           ))}
           <RecapCard />
           <Button
-            onClick={handleClick}
             type="button"
             text="Create my plan!"
             className="mb-32 sm:self-center lg:self-end"
@@ -70,7 +61,6 @@ const Form = () => {
           />
         </form>
       </section>
-      {modal && <OrderSummary />}
     </Container>
   )
 }
