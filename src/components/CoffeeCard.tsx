@@ -1,4 +1,4 @@
-import { useAnimate, stagger, motion } from "framer-motion"
+import { motion } from "framer-motion"
 interface Props {
   key: number
   imgSrc: string
