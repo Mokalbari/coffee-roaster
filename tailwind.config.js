@@ -5,8 +5,8 @@ export default {
     extend: {
       gradientColorStops: {
         custom: {
-          start: "rgb(131,136,143)", // Couleur de départ
-          end: "rgba(255,255,255,0)", // Couleur de fin (blanc transparent)
+          start: "rgb(131,136,143)", // Starting color
+          end: "rgba(255,255,255,0)", // Ending color (white transparent)
         },
       },
       colors: {
@@ -17,37 +17,32 @@ export default {
         "accent-primary": "#0E8784",
         "accent-hover": "#66D2CF",
         "accent-secondary": "#FDD6BA",
+        "white-opacity-90": "rgba(255, 255, 255, 0.9)",
+        "white-opacity-0": "rgba(255, 255, 255, 0)",
       },
-
       fontFamily: {
         sans: ["Barlow", "sans-serif"],
         serif: ["Fraunces", "serif"],
       },
       backgroundImage: {
         "hero-img-mobile":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/home/mobile/image-hero-coffeepress.jpg)",
+          "url(/assets/home/mobile/image-hero-coffeepress.jpg)",
         "hero-img-tablet":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/home/tablet/image-hero-coffeepress.jpg)",
+          "url(/assets/home/tablet/image-hero-coffeepress.jpg)",
         "hero-img-desktop":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/home/desktop/image-hero-coffeepress.jpg)",
+          "url(/assets/home/desktop/image-hero-coffeepress.jpg)",
         "aboutUs-img-mobile":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/mobile/image-hero-whitecup.jpg)",
+          "url(/assets/about/mobile/image-hero-whitecup.jpg)",
         "aboutUs-img-tablet":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/tablet/image-hero-whitecup.jpg)",
+          "url(/assets/about/tablet/image-hero-whitecup.jpg)",
         "aboutUs-img-desktop":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/desktop/image-hero-whitecup.jpg)",
-        "aboutUs-bg-mobile":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/mobile/bg-quality.png)",
-        "aboutUs-bg-tablet":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/tablet/bg-quality.png)",
-        "aboutUs-bg-desktop":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/about/desktop/bg-quality.png)",
-        "plan-bg-mobile":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/plan/mobile/image-hero-blackcup.jpg)",
-        "plan-bg-tablet":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/plan/tablet/image-hero-blackcup.jpg)",
-        "plan-bg-desktop":
-          "url(/home/mokalbari/coding/frontend-mentor/coffee-roaster/src/assets/plan/desktop/image-hero-blackcup.jpg)",
+          "url(/assets/about/desktop/image-hero-whitecup.jpg)",
+        "aboutUs-bg-mobile": "url(/assets/about/mobile/bg-quality.png)",
+        "aboutUs-bg-tablet": "url(/assets/about/tablet/bg-quality.png)",
+        "aboutUs-bg-desktop": "url(/assets/about/desktop/bg-quality.png)",
+        "plan-bg-mobile": "url(/assets/plan/mobile/image-hero-blackcup.jpg)",
+        "plan-bg-tablet": "url(/assets/plan/tablet/image-hero-blackcup.jpg)",
+        "plan-bg-desktop": "url(/assets/plan/desktop/image-hero-blackcup.jpg)",
       },
       maxWidth: {
         "4/5": "80%",

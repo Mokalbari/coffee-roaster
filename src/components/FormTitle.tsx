@@ -1,4 +1,4 @@
-import arrowIcon from "../assets/plan/desktop/icon-arrow.svg"
+import arrowIcon from "/assets/plan/desktop/icon-arrow.svg"
 
 type Props = {
   sectionTitle: string
