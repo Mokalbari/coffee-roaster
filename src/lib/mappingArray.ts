@@ -1,15 +1,15 @@
-import granEspresso from "../assets/home/desktop/image-gran-espresso.png"
-import planalto from "../assets/home/desktop/image-planalto.png"
-import picollo from "../assets/home/desktop/image-piccollo.png"
-import danche from "../assets/home/desktop/image-danche.png"
+import granEspresso from "/assets/home/desktop/image-gran-espresso.png"
+import planalto from "/assets/home/desktop/image-planalto.png"
+import picollo from "/assets/home/desktop/image-piccollo.png"
+import danche from "/assets/home/desktop/image-danche.png"
 
-import coffeeBean from "../assets/home/desktop/icon-coffee-bean.svg"
-import gift from "../assets/home/desktop/icon-gift.svg"
-import truck from "../assets/home/desktop/icon-truck.svg"
+import coffeeBean from "/assets/home/desktop/icon-coffee-bean.svg"
+import gift from "/assets/home/desktop/icon-gift.svg"
+import truck from "/assets/home/desktop/icon-truck.svg"
 
-import ukImg from "../assets/about/desktop/illustration-uk.svg"
-import canadaImg from "../assets/about/desktop/illustration-canada.svg"
-import australiaImg from "../assets/about/desktop/illustration-australia.svg"
+import ukImg from "/assets/about/desktop/illustration-uk.svg"
+import canadaImg from "/assets/about/desktop/illustration-canada.svg"
+import australiaImg from "/assets/about/desktop/illustration-australia.svg"
 
 type NavbarType = {
   id: number

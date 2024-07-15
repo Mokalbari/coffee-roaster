@@ -1,7 +1,7 @@
 import Container from "./Container"
 import { Link } from "react-router-dom"
-import iconClose from "../assets/shared/mobile/icon-close.svg"
-import logo from "../assets/shared/desktop/logo.svg"
+import iconClose from "/assets/shared/mobile/icon-close.svg"
+import logo from "/assets/shared/desktop/logo.svg"
 import { navBarLinks } from "../lib/mappingArray"
 
 type Props = {
@@ -25,7 +25,7 @@ const Menu = ({ isOpen, setIsOpen }: Props) => {
         </div>
         <menu className="text-center font-serif text-2xl font-extrabold">
           {navBarLinks.map(item => (
-            <li key={item.id} className="mb-8">
+            <li key={item.id} className="mb-8" onClick={handleClick}>
               <Link to={item.path}>{item.link}</Link>
             </li>
           ))}

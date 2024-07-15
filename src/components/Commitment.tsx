@@ -1,7 +1,7 @@
 import Container from "./Container"
-import commitmentImgMobile from "../assets/about/mobile/image-commitment.jpg"
-import commitmentImgTablet from "../assets/about/tablet/image-commitment.jpg"
-import commitmentImgDesktop from "../assets/about/desktop/image-commitment.jpg"
+import commitmentImgMobile from "/assets/about/mobile/image-commitment.jpg"
+import commitmentImgTablet from "/assets/about/tablet/image-commitment.jpg"
+import commitmentImgDesktop from "/assets/about/desktop/image-commitment.jpg"
 
 const Commitment = () => {
   return (

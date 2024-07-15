@@ -2,10 +2,9 @@ import { useState } from "react"
 import { navBarLinks } from "../lib/mappingArray"
 import Container from "./Container"
 import Menu from "./Menu"
-import burgerIcon from "../assets/shared/mobile/icon-hamburger.svg"
+import burgerIcon from "/assets/shared/mobile/icon-hamburger.svg"
 import { Link } from "react-router-dom"
-// import closeIcon from "../assets/shared/mobile/icon-close.svg"
-import coffeeBeans from "../assets/shared/desktop/logo.svg"
+import coffeeBeans from "/assets/shared/desktop/logo.svg"
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false)

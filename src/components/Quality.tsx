@@ -1,13 +1,13 @@
 import Container from "./Container"
-import qualitymobile from "../assets/about/mobile/image-quality.jpg"
-import qualitytablet from "../assets/about/tablet/image-quality.jpg"
-import qualitydesktop from "../assets/about/desktop/image-quality.jpg"
+import qualitymobile from "/assets/about/mobile/image-quality.jpg"
+import qualitytablet from "/assets/about/tablet/image-quality.jpg"
+import qualitydesktop from "/assets/about/desktop/image-quality.jpg"
 
 const Quality = () => {
   return (
     <Container className="mt-36 lg:mt-52">
       <section className="relative rounded-xl bg-neutral-black px-6 text-neutral-white lg:px-20">
-        <div className="bg-aboutUs-bg-mobile sm:bg-aboutUs-bg-tablet lg:bg-aboutUs-bg-desktop absolute inset-0 rounded-xl bg-cover bg-center bg-no-repeat opacity-75" />
+        <div className="absolute inset-0 rounded-xl bg-aboutUs-bg-mobile bg-cover bg-center bg-no-repeat opacity-75 sm:bg-aboutUs-bg-tablet lg:bg-aboutUs-bg-desktop" />
 
         <div className="z-10 flex flex-col items-center lg:flex-row-reverse lg:justify-between lg:gap-8">
           <div className="-translate-y-1/4">
