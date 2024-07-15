@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import OrderSummary from "./OrderSummary"
 import { useMediaQuery } from "react-responsive"
 import FormStepProgression from "../components/FormStepProgression"
@@ -8,11 +8,12 @@ import coffeeSubscriptionData from "../lib/coffeeSubscriptionData"
 import RecapCard from "../components/RecapCard"
 import Button from "../components/Button"
 import type { CoffeeStepsName } from "../lib/coffeeSubscriptionData"
+import { FormContext } from "../context/FormContext"
 
 const Form = () => {
   const [modal, setModal] = useState(false)
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
-
+  const { formComplete } = useContext(FormContext)
   const handleClick = () => setModal(true)
 
   return (
@@ -47,7 +48,7 @@ const Form = () => {
             type="button"
             text="Create my plan!"
             className="mb-32 sm:self-center lg:self-end"
-            disabled={false} // Here the button must be disabled if all input radio are not checked.
+            disabled={!formComplete} // Here the button must be disabled if all input radio are not checked.
           />
         </form>
       </section>

@@ -26,6 +26,8 @@ type Type = {
   setUserSelection: React.Dispatch<
     React.SetStateAction<Record<CoffeeStepsName, string>>
   >
+  formComplete: boolean
+  setFormComplete: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 // Default values that are passed to the context down below.
@@ -40,6 +42,8 @@ const defaultFormContext: Type = {
     deliveryOptions: "_____",
   },
   setUserSelection: () => {},
+  formComplete: false,
+  setFormComplete: () => {},
 }
 export const FormContext = createContext(defaultFormContext)
 
@@ -49,6 +53,9 @@ export const FormContextProvider = ({ children }: Props) => {
   const [userSelection, setUserSelection] = useState(
     defaultFormContext.userSelection,
   )
+  const [formComplete, setFormComplete] = useState(
+    defaultFormContext.formComplete,
+  )
 
   return (
     <FormContext.Provider
@@ -57,6 +64,8 @@ export const FormContextProvider = ({ children }: Props) => {
         setIsToggled,
         userSelection,
         setUserSelection,
+        formComplete,
+        setFormComplete,
       }}
     >
       {children}

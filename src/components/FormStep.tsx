@@ -1,4 +1,4 @@
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import FormTitle from "./FormTitle"
 import SubscriptionCard from "./SubscriptionCard"
 import { FormContext } from "../context/FormContext"
@@ -15,7 +15,21 @@ type Props = {
 const FormStep = ({ coffeeArray, step }: Props) => {
   const [selected, setSelected] = useState<string | null>(null)
   const [isToggled, setIsToggled] = useState(false)
-  const { userSelection, setUserSelection } = useContext(FormContext)
+  const { userSelection, setUserSelection, setFormComplete } =
+    useContext(FormContext)
+
+  useEffect(() => {
+    const checkFormComplete = () => {
+      const isComplete = Object.entries(userSelection).every(([key, value]) => {
+        if (key === "grindOptions" && userSelection.brewing === "Capsules") {
+          return true
+        }
+        return value !== "_____"
+      })
+      setFormComplete(isComplete)
+    }
+    checkFormComplete()
+  }, [userSelection, setFormComplete])
 
   const handleClick = (name: string) => () => {
     setSelected(name)
