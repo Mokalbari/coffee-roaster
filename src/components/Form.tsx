@@ -1,4 +1,4 @@
-// import { useState } from "react"
+import { useState } from "react"
 import OrderSummary from "./OrderSummary"
 import { useMediaQuery } from "react-responsive"
 import FormStepProgression from "../components/FormStepProgression"
@@ -10,7 +10,10 @@ import Button from "../components/Button"
 import type { CoffeeStepsName } from "../lib/coffeeSubscriptionData"
 
 const Form = () => {
+  const [modal, setModal] = useState(false)
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
+
+  const handleClick = () => setModal(true)
 
   return (
     <Container>
@@ -40,6 +43,7 @@ const Form = () => {
           ))}
           <RecapCard />
           <Button
+            onClick={handleClick}
             type="button"
             text="Create my plan!"
             className="mb-32 sm:self-center lg:self-end"
@@ -47,7 +51,7 @@ const Form = () => {
           />
         </form>
       </section>
-      <OrderSummary />
+      {modal && <OrderSummary />}
     </Container>
   )
 }
