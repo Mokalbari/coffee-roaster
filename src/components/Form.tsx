@@ -47,7 +47,7 @@ const Form = () => {
             type="button"
             text="Create my plan!"
             className="mb-32 sm:self-center lg:self-end"
-            disabled={false} // Here the button must be disabled if all input radio are not checked.
+            disabled={true} // Here the button must be disabled if all input radio are not checked.
           />
         </form>
       </section>
