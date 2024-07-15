@@ -17,6 +17,8 @@ export default {
         "accent-primary": "#0E8784",
         "accent-hover": "#66D2CF",
         "accent-secondary": "#FDD6BA",
+        "white-opacity-90": "rgba(255, 255, 255, 0.9)",
+        "white-opacity-0": "rgba(255, 255, 255, 0)",
       },
 
       fontFamily: {
