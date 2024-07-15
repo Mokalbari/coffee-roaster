@@ -1,9 +1,16 @@
+type Steps =
+  | "Preferences"
+  | "Bean Type"
+  | "Quantity"
+  | "Grind Option"
+  | "Deliveries"
+
 export type CoffeeTypeEntry = {
   id: number
   type: string
   description: string
   section: string
-  step: string
+  step: Steps
 }
 
 export type CoffeeStepsName =

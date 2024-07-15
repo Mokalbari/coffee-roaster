@@ -12,7 +12,7 @@ type SubscriptionEntries = {
 }[CoffeeStepsName]
 
 // The user choice can be both an empty string "_____" or a key in the SubcriptionEntry
-type ValidSubscriptionEntries = SubscriptionEntries | "_____"
+export type ValidSubscriptionEntries = SubscriptionEntries | "_____"
 
 // This is defining Props and Type for the context
 type Props = {
