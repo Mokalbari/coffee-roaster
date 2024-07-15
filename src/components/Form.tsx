@@ -13,29 +13,47 @@ import { FormContext } from "../context/FormContext"
 const Form = () => {
   const [modal, setModal] = useState(false)
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
-  const { formComplete } = useContext(FormContext)
+  const { formComplete, userSelection } = useContext(FormContext)
   const handleClick = () => setModal(true)
+  const arrayFromCoffeeSubscription = Object.entries(coffeeSubscriptionData)
+
+  // Define a function to determine the class based on userSelection
+  const getClassName = (
+    step: CoffeeStepsName,
+    userSelection: Record<CoffeeStepsName, string>,
+    classOutput: string,
+  ): string | false => {
+    return userSelection[step] !== "_____" && classOutput
+  }
 
   return (
     <Container>
       <section className="gap-32 lg:flex">
         {isLargeScreen && (
           <aside className="w-1/3">
-            {Object.entries(coffeeSubscriptionData).map(
-              ([step, entries], index) => (
-                <FormStepProgression
-                  coffeeArray={Object.values(entries)}
-                  key={step}
-                  index={index}
-                />
-              ),
-            )}
+            {arrayFromCoffeeSubscription.map(([step, entries], index) => (
+              <FormStepProgression
+                classNameParagraphe={getClassName(
+                  step as CoffeeStepsName,
+                  userSelection,
+                  "text-slate-900",
+                )} // entry === index ?
+                classNameSpan={getClassName(
+                  step as CoffeeStepsName,
+                  userSelection,
+                  "text-accent-primary",
+                )}
+                coffeeArray={Object.values(entries)}
+                key={step}
+                index={index}
+              />
+            ))}
           </aside>
         )}
         <form action="post" className="flex flex-col">
           {/* This component has two children : a title and a card.
               It's main focus is to pass props down to children */}
-          {Object.entries(coffeeSubscriptionData).map(([step, entries]) => (
+          {arrayFromCoffeeSubscription.map(([step, entries]) => (
             <FormStep
               coffeeArray={Object.values(entries)}
               key={step}
