@@ -32,7 +32,7 @@ const SubscriptionCard = ({
           name={name}
           value={value}
           checked={selected}
-          onClick={onClick}
+          onChange={onClick}
         />
         {text}
       </label>
