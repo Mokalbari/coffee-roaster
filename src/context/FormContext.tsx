@@ -3,7 +3,7 @@ import type coffeeSubscriptionData from "../lib/coffeeSubscriptionData"
 import type { ReactNode } from "react"
 import type { CoffeeStepsName } from "../lib/coffeeSubscriptionData"
 
-// This part is creating a mapped type. It iterates over each key K in the union type CoffeeStepsName.
+// This iterates over each key K in the union type CoffeeStepsName.
 // CoffeeStepsName is a union type of string literals:
 // "brewing" | "beanTypes" | "quantities" | "grindOptions" | "deliveryOptions".
 
@@ -11,7 +11,7 @@ type SubscriptionEntries = {
   [K in CoffeeStepsName]: (typeof coffeeSubscriptionData)[K][number]["type"]
 }[CoffeeStepsName]
 
-// The user choice can be both an empty string or a key in the SubcriptionEntry
+// The user choice can be both an empty string "_____" or a key in the SubcriptionEntry
 type ValidSubscriptionEntries = SubscriptionEntries | "_____"
 
 // This is defining Props and Type for the context

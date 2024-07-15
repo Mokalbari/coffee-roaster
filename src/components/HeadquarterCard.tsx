@@ -1,4 +1,4 @@
-import { AddressesType } from "../lib/mappingArray"
+import type { AddressesType } from "../lib/mappingArray"
 
 interface Props extends AddressesType {
   key: number

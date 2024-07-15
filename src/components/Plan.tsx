@@ -31,6 +31,7 @@ const Plan = () => {
         </div>
         <Link to="/create-a-plan">
           <Button
+            type="button"
             text="Create your plan"
             className="self-center sm:self-start"
           />

@@ -26,6 +26,7 @@ const SubscriptionCard = ({
       </h3>
       <label>
         <input
+          required={true}
           className="hidden"
           type="radio"
           name={name}
