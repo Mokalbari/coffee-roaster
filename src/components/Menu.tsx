@@ -6,7 +6,7 @@ const Menu = () => {
     <nav>
       <div>
         <img src={logo} alt="Coffee Roasters" />
-        <img src={closeIcon} alt="Close the menu" />
+        <img src={iconClose} alt="Close the menu" />
       </div>
       <menu>
         <li>Home</li>

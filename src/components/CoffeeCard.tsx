@@ -22,6 +22,3 @@ const CoffeeCard = ({ imgSrc, title, text }: Props) => {
 }
 
 export default CoffeeCard
-
-// w-1/2
-// sm:max-lg:w-1/2

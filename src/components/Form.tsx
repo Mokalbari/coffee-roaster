@@ -1,5 +1,4 @@
 import { useContext } from "react"
-import OrderSummary from "./OrderSummary"
 import { useMediaQuery } from "react-responsive"
 import FormStepProgression from "../components/FormStepProgression"
 import FormStep from "../components/FormStep"
