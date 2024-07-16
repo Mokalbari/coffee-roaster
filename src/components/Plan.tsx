@@ -28,7 +28,6 @@ const Plan = () => {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: -100 },
   }
-
   return (
     <Container className="max-w-[95%]">
       <section className="mb-[15vh] flex flex-col items-center sm:items-start">

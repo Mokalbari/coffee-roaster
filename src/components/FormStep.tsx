@@ -94,7 +94,6 @@ const FormStep = ({ coffeeArray, step }: Props) => {
 
   return (
     <>
-      {console.log(userSelection)}
       <FormTitle
         className={
           userSelection.brewing === "Capsules" &&
