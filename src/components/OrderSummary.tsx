@@ -1,18 +1,31 @@
-import { useContext } from "react"
+import { useContext, useRef, useEffect } from "react"
 import { FormContext } from "../context/FormContext"
 import Button from "./Button"
 import { useMediaQuery } from "react-responsive"
+import "../styles/dialogBackdrop.css"
 
 type Props = {
   className?: string
+  open: boolean
+  close: () => void
 }
 
-const OrderSummary = ({ className }: Props) => {
+const OrderSummary = ({ className, open, close }: Props) => {
+  const dialog = useRef<HTMLDialogElement>(null)
   const isSmallScreen = useMediaQuery({ query: "(max-width: 640px)" })
   const { userSelection } = useContext(FormContext)
   const totalPrice = 45
+
+  useEffect(() => {
+    open ? dialog.current?.showModal() : dialog.current?.close()
+  }, [open])
+
   return (
-    <div className={`z-10 max-w-80 rounded-xl ${className}`}>
+    <dialog
+      ref={dialog}
+      onClose={close}
+      className={`z-10 w-4/5 max-w-lg rounded-xl ${className}`}
+    >
       <h2 className="rounded-t-xl bg-neutral-black px-6 py-7 font-serif text-[28px] font-extrabold text-neutral-white">
         Order summary
       </h2>
@@ -46,13 +59,26 @@ const OrderSummary = ({ className }: Props) => {
           selection if something is off. Subscription discount codes can also be
           redeemed at the checkout.{" "}
         </p>
-        <Button
-          type="submit"
-          text={isSmallScreen ? `Checkout - $${totalPrice}/mo` : "Checkout"}
-          className="my-10"
-        />
+        {isSmallScreen ? (
+          <Button
+            onClick={() => dialog.current?.close()}
+            type="submit"
+            text={`Checkout - $${totalPrice}/mo`}
+            className="my-10"
+          />
+        ) : (
+          <div className="flex items-center justify-center gap-8">
+            <span className="font-serif text-3xl font-extrabold">{`$${totalPrice} / mo`}</span>{" "}
+            <Button
+              onClick={() => dialog.current?.close()}
+              className="my-10 px-12"
+              text="Checkout"
+              type="submit"
+            />{" "}
+          </div>
+        )}
       </section>
-    </div>
+    </dialog>
   )
 }
 

@@ -10,12 +10,20 @@ import type { CoffeeStepsName } from "../lib/coffeeSubscriptionData"
 import { FormContext } from "../context/FormContext"
 import getClassName from "../functions/getClassName"
 
-const Form = () => {
+type Props = {
+  setIsModalToggled: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Form = ({ setIsModalToggled }: Props) => {
   const { formComplete, userSelection } = useContext(FormContext)
 
   const isLargeScreen = useMediaQuery({ query: "(min-width: 1024px)" })
 
   const arrayFromCoffeeSubscription = Object.entries(coffeeSubscriptionData)
+
+  const handleClick = () => {
+    setIsModalToggled(true)
+  }
 
   return (
     <Container>
@@ -53,6 +61,7 @@ const Form = () => {
           ))}
           <RecapCard />
           <Button
+            onClick={handleClick}
             type="button"
             text="Create my plan!"
             className="mb-32 sm:self-center lg:self-end"
