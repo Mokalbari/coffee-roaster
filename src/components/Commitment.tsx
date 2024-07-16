@@ -2,6 +2,7 @@ import Container from "./Container"
 import commitmentImgMobile from "/assets/about/mobile/image-commitment.jpg"
 import commitmentImgTablet from "/assets/about/tablet/image-commitment.jpg"
 import commitmentImgDesktop from "/assets/about/desktop/image-commitment.jpg"
+import { motion } from "framer-motion"
 
 const Commitment = () => {
   return (
@@ -14,7 +15,11 @@ const Commitment = () => {
             {/* Version tablet */}
             <source srcSet={commitmentImgTablet} media="(min-width: 640px)" />
             {/* Version mobile */}
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: -300 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ type: "spring" }}
               className="mb-12 rounded-xl"
               src={commitmentImgMobile}
               alt="A coffee roaster making coffee art"
@@ -22,10 +27,21 @@ const Commitment = () => {
           </picture>
         </div>
         <div className="text-center sm:w-1/2 sm:text-left">
-          <h2 className="mb-8 font-serif text-3xl font-extrabold lg:text-[40px]">
+          <motion.h2
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-200px" }}
+            transition={{ type: "spring", delay: 0.1 }}
+            className="mb-8 font-serif text-3xl font-extrabold lg:text-[40px]"
+          >
             Our commitment
-          </h2>
-          <p>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 300 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", delay: 0.1 }}
+          >
             We’re built on a simple mission and a commitment to doing good along
             the way. We want to make it easy for you to discover and brew the
             world’s best coffee at home. It all starts at the source. To locate
@@ -37,7 +53,7 @@ const Commitment = () => {
             community initiatives, and invest in coffee plant science. Curating
             only the finest blends, we roast each lot to highlight tasting
             profiles distinctive to their native growing region.
-          </p>
+          </motion.p>
         </div>
       </section>
     </Container>

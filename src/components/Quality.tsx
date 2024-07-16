@@ -2,6 +2,7 @@ import Container from "./Container"
 import qualitymobile from "/assets/about/mobile/image-quality.jpg"
 import qualitytablet from "/assets/about/tablet/image-quality.jpg"
 import qualitydesktop from "/assets/about/desktop/image-quality.jpg"
+import { motion } from "framer-motion"
 
 const Quality = () => {
   return (
@@ -17,14 +18,24 @@ const Quality = () => {
               {/* tablet version */}
               <source srcSet={qualitytablet} media="(min-width: 640px)" />
               {/* default mobile version */}
-              <img
+              <motion.img
+                initial={{ y: -200, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ type: "spring", bounce: 0.5 }}
+                viewport={{ once: true, amount: "all" }}
                 className="rounded-xl"
                 src={qualitymobile}
                 alt="A latte coffee with a heart art on the foam"
               />
             </picture>
           </div>
-          <div className="z-10 pb-16 text-center lg:w-1/2 lg:pb-28 lg:text-left">
+          <motion.div
+            initial={{ y: 200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", bounce: 0.5 }}
+            viewport={{ once: true, amount: "some" }}
+            className="z-10 pb-16 text-center lg:w-1/2 lg:pb-28 lg:text-left"
+          >
             <h2 className="mb-6 font-serif text-3xl font-extrabold">
               Uncompromising quality
             </h2>
@@ -36,7 +47,7 @@ const Quality = () => {
               and batch number. Our goal is to roast consistent, user-friendly
               coffee, so that brewing is easy and enjoyable.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
     </Container>

@@ -1,8 +1,11 @@
+import type { Variants } from "framer-motion"
+import { motion } from "framer-motion"
 import type { AddressesType } from "../lib/mappingArray"
 
 interface Props extends AddressesType {
   key: number
   className?: string
+  variants: Variants
 }
 
 const HeadquarterCard = ({
@@ -13,9 +16,11 @@ const HeadquarterCard = ({
   location,
   phone,
   className,
+  variants,
 }: Props) => {
   return (
-    <div
+    <motion.li
+      variants={variants}
       className={`flex flex-col items-center sm:items-start ${className || ""}`}
     >
       <img src={imgSrc} alt={country} className="mb-8" />
@@ -26,7 +31,7 @@ const HeadquarterCard = ({
         <p>{location}</p>
         <p>{phone}</p>
       </div>
-    </div>
+    </motion.li>
   )
 }
 
