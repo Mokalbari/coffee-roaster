@@ -53,6 +53,7 @@ const FormStep = ({ coffeeArray, step }: Props) => {
 
   return (
     <>
+      {console.log(userSelection)}
       <FormTitle
         className={
           userSelection.brewing === "Capsules" &&
@@ -63,7 +64,7 @@ const FormStep = ({ coffeeArray, step }: Props) => {
         onClick={handleToggleSection(coffeeArray[0].section)}
       />
       <div
-        className={`mb-28 cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col ${isToggled ? "grid" : "hidden"}`}
+        className={`mb-28 cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col sm:grid-cols-3 ${isToggled ? "grid" : "hidden"}`}
       >
         {coffeeArray.map(coffee => (
           <SubscriptionCard

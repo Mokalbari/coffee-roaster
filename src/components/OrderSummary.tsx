@@ -2,6 +2,7 @@ import { useContext, useRef, useEffect } from "react"
 import { FormContext } from "../context/FormContext"
 import Button from "./Button"
 import { useMediaQuery } from "react-responsive"
+import calculateShipment from "../functions/calculateShipment"
 import "../styles/dialogBackdrop.css"
 
 type Props = {
@@ -14,11 +15,15 @@ const OrderSummary = ({ className, open, close }: Props) => {
   const dialog = useRef<HTMLDialogElement>(null)
   const isSmallScreen = useMediaQuery({ query: "(max-width: 640px)" })
   const { userSelection } = useContext(FormContext)
-  const totalPrice = 45
 
   useEffect(() => {
     open ? dialog.current?.showModal() : dialog.current?.close()
   }, [open])
+
+  const totalPrice = calculateShipment(
+    userSelection.quantities,
+    userSelection.deliveryOptions,
+  )
 
   return (
     <dialog

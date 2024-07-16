@@ -5,12 +5,15 @@ type Steps =
   | "Grind Option"
   | "Deliveries"
 
+export type ShipmentOption = "weekly" | "biMonthly" | "monthly"
+
 export type CoffeeTypeEntry = {
   id: number
   type: string
   description: string
   section: string
   step: Steps
+  price?: Record<ShipmentOption, number>
 }
 
 export type CoffeeStepsName =
@@ -83,6 +86,11 @@ const coffeeSubscriptionData: Record<
         "Perfect for the solo drinker. Yields about 12 delicious cups.",
       section: "How much would you like?",
       step: "Quantity",
+      price: {
+        weekly: 7.2,
+        biMonthly: 9.6,
+        monthly: 12.0,
+      },
     },
     2: {
       id: 2,
@@ -91,6 +99,11 @@ const coffeeSubscriptionData: Record<
         "Perfect option for a couple. Yields about 40 delectable cups.",
       section: "How much would you like?",
       step: "Quantity",
+      price: {
+        weekly: 13.0,
+        biMonthly: 17.5,
+        monthly: 22.0,
+      },
     },
     3: {
       id: 3,
@@ -99,6 +112,11 @@ const coffeeSubscriptionData: Record<
         "Perfect for offices and events. Yields about 90 delightful cups.",
       section: "How much would you like?",
       step: "Quantity",
+      price: {
+        weekly: 22.0,
+        biMonthly: 32.0,
+        monthly: 42.0,
+      },
     },
   },
   grindOptions: {
