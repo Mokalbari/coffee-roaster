@@ -12,6 +12,8 @@ type Props = {
   step: CoffeeStepsName
 }
 
+import { AnimatePresence, easeIn, motion } from "framer-motion"
+
 const FormStep = ({ coffeeArray, step }: Props) => {
   const [selected, setSelected] = useState<string | null>(null)
   const [isToggled, setIsToggled] = useState(false)
@@ -62,22 +64,33 @@ const FormStep = ({ coffeeArray, step }: Props) => {
         }
         sectionTitle={coffeeArray[0].section}
         onClick={handleToggleSection(coffeeArray[0].section)}
+        isToggled={isToggled}
       />
-      <div
-        className={`mb-28 cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col sm:grid-cols-3 ${isToggled ? "grid" : "hidden"}`}
-      >
-        {coffeeArray.map(coffee => (
-          <SubscriptionCard
-            onClick={handleClick(coffee.type)}
-            key={coffee.id}
-            title={coffee.type}
-            value={coffee.type}
-            name="coffee-brewing"
-            text={coffee.description}
-            selected={coffee.type === selected}
-          />
-        ))}
-      </div>
+      <AnimatePresence>
+        {isToggled && (
+          <motion.div
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ x: 100, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className={
+              "mb-28 grid cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col sm:grid-cols-3"
+            }
+          >
+            {coffeeArray.map(coffee => (
+              <SubscriptionCard
+                onClick={handleClick(coffee.type)}
+                key={coffee.id}
+                title={coffee.type}
+                value={coffee.type}
+                name="coffee-brewing"
+                text={coffee.description}
+                selected={coffee.type === selected}
+              />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }

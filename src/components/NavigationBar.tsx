@@ -5,6 +5,7 @@ import Menu from "./Menu"
 import burgerIcon from "/assets/shared/mobile/icon-hamburger.svg"
 import { Link } from "react-router-dom"
 import coffeeBeans from "/assets/shared/desktop/logo.svg"
+import { AnimatePresence } from "framer-motion"
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,7 +33,9 @@ const NavigationBar = () => {
           ))}
         </menu>
       </nav>
-      {isOpen && <Menu isOpen={isOpen} setIsOpen={setIsOpen} />}
+      <AnimatePresence>
+        {isOpen && <Menu isOpen={isOpen} setIsOpen={setIsOpen} />}
+      </AnimatePresence>
     </Container>
   )
 }
