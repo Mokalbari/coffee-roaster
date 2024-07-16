@@ -21,7 +21,7 @@ const Quality = () => {
               <motion.img
                 initial={{ y: -200, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ type: "spring", bounce: 0.5 }}
+                transition={{ type: "spring", bounce: 0.3 }}
                 viewport={{ once: true, amount: "all" }}
                 className="rounded-xl"
                 src={qualitymobile}
@@ -32,7 +32,7 @@ const Quality = () => {
           <motion.div
             initial={{ y: 200, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ type: "spring", bounce: 0.5 }}
+            transition={{ type: "spring", bounce: 0.3 }}
             viewport={{ once: true, amount: "some" }}
             className="z-10 pb-16 text-center lg:w-1/2 lg:pb-28 lg:text-left"
           >

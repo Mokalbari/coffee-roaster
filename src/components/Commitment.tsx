@@ -2,7 +2,7 @@ import Container from "./Container"
 import commitmentImgMobile from "/assets/about/mobile/image-commitment.jpg"
 import commitmentImgTablet from "/assets/about/tablet/image-commitment.jpg"
 import commitmentImgDesktop from "/assets/about/desktop/image-commitment.jpg"
-import { motion } from "framer-motion"
+import { easeInOut, motion } from "framer-motion"
 
 const Commitment = () => {
   return (
@@ -18,8 +18,8 @@ const Commitment = () => {
             <motion.img
               initial={{ opacity: 0, x: -300 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ type: "spring" }}
+              viewport={{ once: true, margin: "-150px" }}
+              transition={{ ease: easeInOut }}
               className="mb-12 rounded-xl"
               src={commitmentImgMobile}
               alt="A coffee roaster making coffee art"
@@ -31,7 +31,7 @@ const Commitment = () => {
             initial={{ opacity: 0, x: 300 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-200px" }}
-            transition={{ type: "spring", delay: 0.1 }}
+            transition={{ type: "spring", delay: 0.1, bounce: 0.3 }}
             className="mb-8 font-serif text-3xl font-extrabold lg:text-[40px]"
           >
             Our commitment
@@ -40,7 +40,7 @@ const Commitment = () => {
             initial={{ opacity: 0, y: 300 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", delay: 0.1 }}
+            transition={{ type: "spring", bounce: 0.3, delay: 0.1 }}
           >
             We’re built on a simple mission and a commitment to doing good along
             the way. We want to make it easy for you to discover and brew the
