@@ -28,7 +28,7 @@ const ChooseUs = () => {
 
   return (
     <Container>
-      <section className="relative mb-[600px] min-h-[1000px] rounded-xl bg-neutral-black px-6 pt-16 text-center text-neutral-white sm:mb-96 sm:max-h-[50vh] sm:min-h-[500px] sm:pb-16 lg:mb-60">
+      <section className="relative mb-[500px] min-h-[1000px] rounded-xl bg-neutral-black px-6 pt-16 text-center text-neutral-white sm:mb-96 sm:max-h-[50vh] sm:min-h-[500px] sm:pb-16 lg:mb-60">
         <motion.h2
           initial={{ x: 200 }}
           viewport={{ once: true }}
