@@ -70,10 +70,9 @@ const FormStep = ({ coffeeArray, step }: Props) => {
     },
     exit: {
       opacity: 0,
-      x: 100,
+      y: 50,
       transition: {
-        staggerChildren: 0.2,
-        duration: 0.3,
+        staggerChildren: 0.1,
       },
     },
   }
@@ -89,7 +88,7 @@ const FormStep = ({ coffeeArray, step }: Props) => {
     },
     exit: {
       opacity: 0,
-      x: 100,
+      y: 50,
     },
   }
 
