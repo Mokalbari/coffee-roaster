@@ -3,7 +3,7 @@ import Container from "./Container"
 import { coffeeSelection } from "../lib/mappingArray"
 import "../styles/CoffeeSelection.css"
 import type { Variants } from "framer-motion"
-import { motion } from "framer-motion"
+import { easeIn, motion } from "framer-motion"
 
 const CoffeeSelection = () => {
   const list: Variants = {
@@ -12,19 +12,21 @@ const CoffeeSelection = () => {
       transition: {
         when: "beforeChildren",
         staggerChildren: 0.3,
+        ease: easeIn,
       },
     },
     hidden: {
       opacity: 0,
       transition: {
         when: "afterChildren",
+        ease: easeIn,
       },
     },
   }
 
   const item: Variants = {
     visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -100 },
+    hidden: { opacity: 0, y: 50 },
   }
 
   return (
