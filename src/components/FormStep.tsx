@@ -12,7 +12,7 @@ type Props = {
   step: CoffeeStepsName
 }
 
-import { AnimatePresence, easeIn, motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 const FormStep = ({ coffeeArray, step }: Props) => {
   const [selected, setSelected] = useState<string | null>(null)
@@ -53,6 +53,46 @@ const FormStep = ({ coffeeArray, step }: Props) => {
     setIsToggled(!isToggled)
   }
 
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+    exit: {
+      opacity: 0,
+      x: 100,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 0.3,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: -50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+    exit: {
+      opacity: 0,
+      x: 100,
+    },
+  }
+
   return (
     <>
       {console.log(userSelection)}
@@ -69,16 +109,17 @@ const FormStep = ({ coffeeArray, step }: Props) => {
       <AnimatePresence>
         {isToggled && (
           <motion.div
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ x: 100, opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={containerVariants}
             className={
               "mb-28 grid cursor-pointer gap-4 sm:min-h-64 sm:grid-flow-col sm:grid-cols-3"
             }
           >
             {coffeeArray.map(coffee => (
               <SubscriptionCard
+                variants={itemVariants}
                 onClick={handleClick(coffee.type)}
                 key={coffee.id}
                 title={coffee.type}

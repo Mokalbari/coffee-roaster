@@ -1,3 +1,6 @@
+import { motion } from "framer-motion"
+import type { Variants } from "framer-motion"
+
 type Props = {
   key: number
   title: string
@@ -6,6 +9,7 @@ type Props = {
   name: string
   selected: boolean
   onClick: () => void
+  variants: Variants
 }
 
 const SubscriptionCard = ({
@@ -15,9 +19,11 @@ const SubscriptionCard = ({
   name,
   selected,
   onClick,
+  variants,
 }: Props) => {
   return (
-    <div
+    <motion.div
+      variants={variants}
       className={`rounded-xl p-6 hover:bg-accent-secondary ${selected ? "bg-accent-primary text-neutral-white" : "bg-neutral-lightgrey"}`}
       onClick={onClick}
     >
@@ -36,7 +42,7 @@ const SubscriptionCard = ({
         />
         {text}
       </label>
-    </div>
+    </motion.div>
   )
 }
 
