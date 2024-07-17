@@ -18,8 +18,8 @@ const Commitment = () => {
             <motion.img
               initial={{ opacity: 0, x: -300 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-150px" }}
-              transition={{ ease: easeInOut }}
+              viewport={{ once: true, amount: "some" }}
+              transition={{ ease: easeInOut, delay: 0.5 }}
               className="mb-12 rounded-xl"
               src={commitmentImgMobile}
               alt="A coffee roaster making coffee art"
